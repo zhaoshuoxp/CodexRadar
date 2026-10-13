@@ -55,7 +55,7 @@ case "${1:-}" in
   --zip)
     ZIP="$OUT/$NAME-$VERSION-macOS.zip"
     rm -f "$ZIP"
-    ditto -c -k --sequesterRsrc --keepParent "$APP" "$ZIP"
+    ditto -c -k --norsrc --keepParent "$APP" "$ZIP"
     echo "Created $ZIP"
     ;;
 esac
